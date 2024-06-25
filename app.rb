@@ -2,6 +2,17 @@ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","o
 
 def substrings (str, dictionary)
 
+  str_words = str.split()
+
+  # dictionary.reduce(Hash.new(0)) do |result, word|
+  #   str_words.each do |index|
+  #     if word.include?(index)
+  #       result[word] += 1
+  #     end
+  #   end
+  # end
+
+
 end
 
 
