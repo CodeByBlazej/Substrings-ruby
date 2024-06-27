@@ -4,7 +4,7 @@ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","o
 
 def substrings (str, dictionary)
   
-  str_words = str.downcase.split()
+  str_words = str.downcase.split(/\W+/)
   binding.pry
 
   matching_words = []
@@ -16,6 +16,11 @@ def substrings (str, dictionary)
       end
   end
 
+  calculation = matching_words.reduce(Hash.new(0)) do |result, number|
+    result[number] += 1
+    result
+  end
+  p calculation
   p matching_words
   # dictionary.reduce(Hash.new(0)) do |result, value|
   #   str_words.each do |word|
