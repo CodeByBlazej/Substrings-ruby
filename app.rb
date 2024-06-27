@@ -5,16 +5,19 @@ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","o
 def substrings (str, dictionary)
   
   str_words = str.downcase.split(/\W+/)
-  binding.pry
-
+  
   matching_words = []
+  
   
   dictionary.each do |element|
     str_words.each do |word|
       if element.include?(word)
         matching_words.push(word)
       end
-  end
+    end
+
+    binding.pry
+
 
   calculation = matching_words.reduce(Hash.new(0)) do |result, number|
     result[number] += 1
@@ -36,4 +39,5 @@ def substrings (str, dictionary)
 end
 
 
-substrings("Howdy partner, sit down! How's it going?", dictionary)
+# substrings("Howdy partner, sit down! How's it going?", dictionary)
+substrings("below sit", dictionary)
